@@ -7,11 +7,11 @@ public class Theatre {
         Actor petrov = new Actor("Пётр", "Петров", Gender.MALE, 205);
         Actor sidorov = new Actor("Сидр", "Сидоров", Gender.MALE, 157);
 
-        Director kotova = new Director("Валерия", "Котова", 52);
-        Director sobakova = new Director("Екатерина", "Собакова", 6);
+        Director kotova = new Director("Валерия", "Котова", Gender.FEMALE, 52);
+        Director sobakova = new Director("Екатерина", "Собакова", Gender.FEMALE, 6);
 
-        Person musicAuthor = new Person("Валентин", "Иванов");
-        Person choreographer = new Person("Григорий", "Григорьев");
+        Person musicAuthor = new Person("Валентин", "Иванов", Gender.MALE);
+        Person choreographer = new Person("Григорий", "Григорьев", Gender.MALE);
 
         ArrayList<Actor> musicalShowActors = new ArrayList<>();
         MusicalShow musicalShow = new MusicalShow("Название спектакля", 100, kotova, musicalShowActors, "Какой-то текст для спектакля", musicAuthor);
