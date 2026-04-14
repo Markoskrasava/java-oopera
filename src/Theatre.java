@@ -6,6 +6,7 @@ public class Theatre {
         Actor ivanov = new Actor("Иван", "Иванов", Gender.MALE, 188.5);
         Actor petrov = new Actor("Пётр", "Петров", Gender.MALE, 205);
         Actor sidorov = new Actor("Сидр", "Сидоров", Gender.MALE, 157);
+        Actor ivanov2 = new Actor("Пётр" , "Иванов", Gender.MALE, 188.5);
 
         Director kotova = new Director("Валерия", "Котова", Gender.FEMALE, 52);
         Director sobakova = new Director("Екатерина", "Собакова", Gender.FEMALE, 6);
@@ -24,22 +25,30 @@ public class Theatre {
 
         musicalShow.setListOfActors(ivanov);
         musicalShow.setListOfActors(sidorov);
+        musicalShow.setListOfActors(ivanov2);
 
         opera.setListOfActors(ivanov);
         opera.setListOfActors(petrov);
+
 
         ballet.setListOfActors(ivanov);
         ballet.setListOfActors(petrov);
         ballet.setListOfActors(sidorov);
 
-        musicalShow.getListOfActors();
-        opera.getListOfActors();
-        ballet.getListOfActors();
+        opera.setListOfActors(petrov);
 
-        musicalShow.replaceActor(petrov, "Иванов");
-        musicalShow.getListOfActors();
+        musicalShow.printActors();
+        opera.printActors();
+        ballet.printActors();
 
-        opera.replaceActor(sidorov, "Сидоров");
+        musicalShow.replaceActor(petrov, "Сидоров", 2);
+        musicalShow.printActors();
+
+        opera.replaceActor(sidorov, "Сидоров", 2);
+        musicalShow.replaceActor(sidorov, "Иванов", 3);
+        musicalShow.printActors();
+
+
 
         System.out.println(opera.getLibrettoText());
         System.out.println(ballet.getLibrettoText());

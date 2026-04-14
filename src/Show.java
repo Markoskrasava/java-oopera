@@ -14,7 +14,7 @@ public class Show {
     }
 
 
-    public void getListOfActors() {
+    public void printActors() {
         for (Actor actor : listOfActors) {
             System.out.println(actor.toString());
         }
@@ -27,18 +27,14 @@ public class Show {
                 System.out.println("Такой актёр уже существует");
                 return;
             }
-            if (newActor.hashCode() == actor.hashCode()) {
-                System.out.println("Такой актёр уже существует");
-                return;
-            }
         }
         }
         listOfActors.add(newActor);
     }
 
-    public void replaceActor(Actor newActor, String surname) {
+    public void replaceActor(Actor newActor, String surname, int id) {
         for (int i = 0; i < listOfActors.size(); i++) {
-            if (surname.equals(listOfActors.get(i).getSurname())) {
+            if ((surname.equals(listOfActors.get(i).getSurname())) && (id == listOfActors.get(i).getId())) {
                 listOfActors.remove(listOfActors.get(i));
                 listOfActors.add(newActor);
                 return;
